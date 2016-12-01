@@ -1,0 +1,17 @@
+<div>
+  <div class="configuration">
+    <div> choose type of the game
+      Jigsaw <input type="radio" name="type" ng-model="type" value="jigsaw" ng-change="changeGame()">
+      Square <input type="radio" name="type" ng-model="type" value="square" ng-change="changeGame()">
+    </div>
+    <input type="file" placeholder="browse image" class="choose"/>
+    <select  ng-model="level" ng-change="changeGame()">
+      <option value="1">easy</option>
+      <option value="2">hard</option>
+      <option value="3">medium</option>
+    </select>
+    <input type="file"/>
+      <button ng-click="shuffle()">shuffle</button>
+  </div>
+<div class="canvas-area"></div>
+</div>

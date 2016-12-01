@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="templates">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-controller="PuzzleCtrl">
+<puzzle url="puzzleData.url"
+        is-jigsaw="puzzleData.isJigsaw"
+        level="puzzleData.level"></puzzle>
+<script src="libs/jquery-1.9.1.min.js"></script>
+<script src="libs/phaser.min.js"></script>
+<script src="libs/Angular.min.js"></script>
+<script src="src/puzzle.js"></script>
+<script>
+    angular.module("templates").controller("PuzzleCtrl",function($scope){
+        $scope.puzzleData={
+            url:"assets/1.png",
+            isJigsaw:true,
+            level:2
+        }
+    })
+</script>
+</body>
+
+</html>
